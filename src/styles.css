@@ -19,13 +19,13 @@ h1, h2, h3, h4 {
 
 button {
   padding: 2rem;
-  background-color: tan;
+  background-color: cadetblue;
   border-radius: 1rem;
   font-family: RetroGaming, sans-serif;
-  color: maroon;
+  color: darkslategray;
   border: none;
   font-size: 3rem;
-  box-shadow: 0.5rem 0.5rem 0.125rem sienna;
+  box-shadow: 0.5rem 0.5rem 0.125rem darkslategray;
   cursor: pointer;
 }
 

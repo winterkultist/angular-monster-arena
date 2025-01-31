@@ -1,0 +1,55 @@
+.badge {
+  height: 10rem;
+  width: 35rem;
+  background-color: antiquewhite;
+  border-radius: 2rem;
+  border: 0.25rem solid tan;
+  box-shadow: 0.5rem 0.5rem 0.125rem tan;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.img-box {
+  margin: 1rem;
+  background-color: whitesmoke;
+  border-radius: 1.5rem;
+  box-shadow: inset 0.125rem 0.125rem 0.5rem black;
+  width: 8rem;
+  height: 8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  width: 6rem;
+  height: 6rem;
+}
+
+.name-plate {
+  color: maroon;
+  font-size: 2rem;
+}
+
+h2 {
+  display: block;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.stats {
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+  font-family: RetroGaming, sans-serif;
+  font-size: 3rem;
+}
+
+.health {
+  color: Brown;
+}
+
+.energy {
+  color: gold;
+}

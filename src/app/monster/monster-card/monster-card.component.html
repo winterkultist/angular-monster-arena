@@ -1,42 +1,44 @@
 <div class="card">
   <div class="img-box">
-    <img src="/img/heads/{{monster?.img}}.png" alt="monster-pic" [ngClass]="{
-    flipped: flipImage
-    }">
+    @if (flipImage) {
+      <img src="/img/heads/{{monster.img}}.png" alt="monster-pic" class="flipped">
+    } @else {
+      <img src="/img/heads/{{monster.img}}.png" alt="monster-pic">
+    }
   </div>
   <div class="name-plate">
-    <h2>{{ monster?.name }}</h2>
+    <h2>{{ monster.name }}</h2>
   </div>
   <div class="stats">
     <div class="elements">
       <div>
         <div>Element</div>
-        <div>{{ monster?.element }}</div>
+        <div>{{ monster.element }}</div>
       </div>
       <div>
         <div>Resistances</div>
-        <div>{{ monster?.resistances?.[0] }}</div>
+        <div>{{ monster.resistances?.[0] }}</div>
         <div>🔥</div>
       </div>
       <div>
         <div>Attacks</div>
         <div>
-          <app-attack [attack]="monster?.attacks?.[0]"></app-attack>
+          <app-attack [attack]="monster.attacks?.[0]"></app-attack>
         </div>
       </div>
     </div>
     <div class="energy bar">
-      @let energyPercent = ((monster?.currentEnergy ?? 1) / (monster?.maxEnergy ?? 1)) * 100;
+      @let energyPercent = ((monster.currentEnergy ?? 1) / (monster.maxEnergy ?? 1)) * 100;
       <div class="inner-bar" [style.width]="energyPercent + '%'"></div>
       <div class="info">
-        {{ monster?.currentEnergy }} / {{ monster?.maxEnergy }}
+        {{ monster.currentEnergy }} / {{ monster.maxEnergy }}
       </div>
     </div>
     <div class="health bar">
-      @let healthPercent = ((monster?.currentHealth ?? 1) / (monster?.maxHealth ?? 1)) * 100;
+      @let healthPercent = ((monster.currentHealth ?? 1) / (monster.maxHealth ?? 1)) * 100;
       <div class="inner-bar" [style.width]="healthPercent + '%'"></div>
       <div class="info">
-        {{ monster?.currentHealth }} / {{ monster?.maxHealth }}
+        {{ monster.currentHealth }} / {{ monster.maxHealth }}
       </div>
     </div>
   </div>

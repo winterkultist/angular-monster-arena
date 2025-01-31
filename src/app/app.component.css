@@ -20,15 +20,3 @@ div {
   display: flex;
   flex-direction: column;
 }
-
-.arena {
-  display: flex;
-  justify-content: center;
-  gap: 5rem;
-}
-
-.actions {
-  margin-top: 5rem;
-  display: flex;
-  justify-content: center;
-}

@@ -8,19 +8,11 @@
   <div class="content">
 
     @if (nav == 'monsters') {
-
+      <app-monster-list [monsters]="monsters"></app-monster-list>
     }
 
     @if (nav == 'arena') {
-
-      <div class="arena">
-        <app-monster-card [monster]="leftMonster"></app-monster-card>
-        <app-monster-card [monster]="rightMonster" [flipImage]="true"></app-monster-card>
-      </div>
-
-      <div class="actions">
-        <button (click)="fight()" [disabled]="!fightEnabled"><span>FIGHT!</span></button>
-      </div>
+      <app-arena [leftMonster]="monsters[0]" [rightMonster]="monsters[1]"></app-arena>
     }
 
     @if (nav == 'creator') {

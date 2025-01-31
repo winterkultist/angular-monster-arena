@@ -1,7 +1,3 @@
-:root {
-  --card-size: 2.0;
-}
-
 .card {
   height: 35rem;
   width: 25rem;

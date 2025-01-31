@@ -14,7 +14,7 @@ import {NgClass} from '@angular/common';
 })
 export class MonsterCardComponent {
 
-  @Input() monster: Monster | undefined;
+  @Input({required: true}) monster!: Monster;
   @Input() flipImage = false;
 
 }

@@ -1,0 +1,20 @@
+<div class="arena">
+  @if (leftMonster) {
+    <app-monster-card [monster]="leftMonster"></app-monster-card>
+  } @else {
+    <div class="waiting" (click)="startAnimation()">
+      <span>{{ waitingText }}</span>
+    </div>
+  }
+  @if (rightMonster) {
+    <app-monster-card [monster]="rightMonster" [flipImage]="true"></app-monster-card>
+  } @else {
+    <div class="waiting" (click)="startAnimation()">
+      <span>{{ waitingText }}</span>
+    </div>
+  }
+</div>
+
+<div class="actions">
+  <button (click)="fight()" [disabled]="!fightEnabled"><span>FIGHT!</span></button>
+</div>

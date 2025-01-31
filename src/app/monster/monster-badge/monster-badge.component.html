@@ -1,0 +1,31 @@
+<div class="badge">
+  <div class="img-box">
+    <img src="/img/heads/{{monster.img}}.png" alt="monster-pic">
+  </div>
+  <div class="info">
+    <div class="name-plate">
+      <h2>{{ monster.name }}</h2>
+    </div>
+    <div class="stats">
+      <div class="element">
+        @if (monster.element === 'FIRE') {
+          🔥
+        } @else if (monster.element === 'ICE') {
+          ❄️
+        } @else if (monster.element === 'POISON') {
+          🍄
+        } @else if (monster.element === 'ACID') {
+          🧪
+        } @else {
+          ⁉️
+        }
+      </div>
+      <div class="energy pill">
+        {{ monster.maxEnergy }}
+      </div>
+      <div class="health pill">
+        {{ monster.maxHealth }}
+      </div>
+    </div>
+  </div>
+</div>
