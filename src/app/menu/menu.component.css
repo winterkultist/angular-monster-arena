@@ -1,0 +1,22 @@
+.menu {
+  width: 100%;
+  gap: 3rem;
+  display: flex;
+  justify-content: center;
+  margin: 1rem;
+}
+
+a {
+  color: maroon;
+  font-family: RetroGaming, sans-serif;
+  font-size: 3rem;
+  background-color: tan;
+  padding: 1rem 2rem;
+  display: block;
+  cursor: pointer;
+}
+
+a:hover {
+  color: tan;
+  background-color: maroon;
+}

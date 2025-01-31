@@ -1,0 +1,24 @@
+h1 {
+  font-size: 6rem;
+  cursor: default;
+  color: DarkSlateGray;
+  margin: 0;
+}
+
+h1 > span {
+  display: inline-block;
+  transition: 0.4s ease-in-out;
+  transform: scale(1, 1);
+}
+
+h1 > span:hover {
+  color: SlateGray;
+  transform: scale(1, 2);
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 12rem;
+}
