@@ -1,4 +1,4 @@
-import {Component, Input} from '@angular/core';
+import {Component, EventEmitter, Input, Output} from '@angular/core';
 import {Monster} from '../model/monster.model';
 import {MonsterBadgeComponent} from '../monster/monster-badge/monster-badge.component';
 
@@ -13,9 +13,9 @@ import {MonsterBadgeComponent} from '../monster/monster-badge/monster-badge.comp
 export class MonsterListComponent {
 
   @Input() monsters: Monster[] = [];
+  @Output() monsterSelected = new EventEmitter<Monster>();
 
   sendToArena(monster: Monster) {
-    // TODO
-    window.alert('TODO!');
+    this.monsterSelected.emit(monster);
   }
 }

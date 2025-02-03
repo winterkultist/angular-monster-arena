@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, Input} from '@angular/core';
 import {MonsterCardComponent} from "../monster/monster-card/monster-card.component";
 import {Monster} from '../model/monster.model';
 import {coinFlip, getRandomPossibleAttack, isKo} from './fight.helper';
@@ -13,8 +13,8 @@ import {coinFlip, getRandomPossibleAttack, isKo} from './fight.helper';
 })
 export class ArenaComponent {
 
-  leftMonster?: Monster;
-  rightMonster?: Monster;
+  @Input() leftMonster?: Monster;
+  @Input() rightMonster?: Monster;
 
   waitingText = "WAITING...";
   fightInAction = true;

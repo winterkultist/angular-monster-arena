@@ -19,32 +19,31 @@ export class AppComponent {
   selectedLeftMonster?: Monster;
   selectedRightMonster?: Monster;
 
-  monsters: Monster[] = [{
-    name: 'Lavalak',
-    img: 'double-dragon',
-    element: 'FIRE',
-    attacks: [
-      {
-        name: 'Fireball',
-        element: 'FIRE',
-        damage: 3,
-        energyCost: 2
-      },
-      {
-        name: 'Burn',
-        element: 'FIRE',
-        damage: 1,
-        energyCost: 1
-      },
-    ],
-    resistances: [
-      'ICE'
-    ],
-    maxEnergy: 12,
-    maxHealth: 10,
-    currentHealth: 10,
-    currentEnergy: 12
-  },
+  monsters: Monster[] = [
+    {
+      name: 'Lavalak',
+      img: 'double-dragon',
+      element: 'FIRE',
+      attacks: [
+        {
+          name: 'Fireball',
+          element: 'FIRE',
+          damage: 3,
+          energyCost: 2
+        },
+        {
+          name: 'Burn',
+          element: 'FIRE',
+          damage: 1,
+          energyCost: 1
+        },
+      ],
+      resistances: [
+        'ICE'
+      ],
+      maxEnergy: 12,
+      maxHealth: 10
+    },
     {
       name: 'Slimolak',
       img: 'gooey-daemon',
@@ -59,8 +58,44 @@ export class AppComponent {
       ],
       resistances: [],
       maxEnergy: 14,
-      maxHealth: 12,
-      currentHealth: 12,
-      currentEnergy: 14
-    }];
+      maxHealth: 8
+    },
+    {
+      name: 'Tricelak',
+      img: 'triceratops-head',
+      element: 'ICE',
+      attacks: [
+        {
+          name: 'Chill',
+          element: 'ICE',
+          damage: 1,
+          energyCost: 1
+        },
+        {
+          name: 'Blizzard',
+          element: 'FIRE',
+          damage: 5,
+          energyCost: 6
+        },
+      ],
+      resistances: [],
+      maxEnergy: 8,
+      maxHealth: 10
+    }
+  ];
+
+  monsterSelected(monster: Monster) {
+    const freshClonedMonster = {
+      ...monster,
+      currentEnergy: monster.maxEnergy,
+      currentHealth: monster.maxHealth,
+    }
+    if (this.selectedLeftMonster == null) {
+      this.selectedLeftMonster = freshClonedMonster;
+    } else if (this.selectedRightMonster == null) {
+      this.selectedRightMonster = freshClonedMonster;
+    } else {
+      window.alert('Arena already full!');
+    }
+  }
 }

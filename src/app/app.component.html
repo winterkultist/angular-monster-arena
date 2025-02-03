@@ -7,11 +7,11 @@
 
   <div class="content">
     @if (nav == 'monsters') {
-      <app-monster-list [monsters]="monsters"></app-monster-list>
+      <app-monster-list [monsters]="monsters" (monsterSelected)="monsterSelected($event)"></app-monster-list>
     }
 
     @if (nav == 'arena') {
-      <app-arena></app-arena>
+      <app-arena [leftMonster]="selectedLeftMonster" [rightMonster]="selectedRightMonster"></app-arena>
     }
 
     @if (nav == 'creator') {
