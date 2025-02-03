@@ -3,9 +3,8 @@
   @for (monster of monsters; track monster.name) {
     <div class="item">
       <app-monster-badge [monster]="monster"></app-monster-badge>
-      <button (click)="sendToArena(monster)" >TO ARENA!</button>
+      <button (click)="sendToArena(monster)" >SEND TO ARENA!</button>
     </div>
-
   }
 
 </div>

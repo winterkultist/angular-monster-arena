@@ -6,18 +6,20 @@
   </div>
 
   <div class="content">
-
     @if (nav == 'monsters') {
       <app-monster-list [monsters]="monsters"></app-monster-list>
     }
 
     @if (nav == 'arena') {
-      <app-arena [leftMonster]="monsters[0]" [rightMonster]="monsters[1]"></app-arena>
+      <app-arena></app-arena>
     }
 
     @if (nav == 'creator') {
       <!-- TODO -->
     }
+  </div>
 
+  <div class="float">
+    <app-floating-footer></app-floating-footer>
   </div>
 </div>

@@ -15,6 +15,14 @@
   }
 </div>
 
-<div class="actions">
-  <button (click)="fight()" [disabled]="!fightEnabled"><span>FIGHT!</span></button>
-</div>
+@if (fightInAction) {
+  <div class="actions">
+    <button (click)="fight()"><span>FIGHT!</span></button>
+  </div>
+} @else {
+  <div class="combat-log">
+    @for (message of combatLog; track message) {
+      <div>{{ message }}</div>
+    }
+  </div>
+}

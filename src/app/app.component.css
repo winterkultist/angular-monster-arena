@@ -20,3 +20,9 @@ div {
   display: flex;
   flex-direction: column;
 }
+
+.float {
+  position: fixed;
+  right: 3rem;
+  bottom: 3rem;
+}

@@ -32,3 +32,24 @@
   display: block;
   margin-left: 4rem;
 }
+
+.combat-log {
+  margin: 2rem;
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 1rem;
+  align-items: center;
+}
+
+.combat-log > div {
+  background-color: antiquewhite;
+  /*border: 0.25rem solid tan;*/
+  color: maroon;
+  font-size: 1.5rem;
+  border-radius: 1rem;
+  width: 30rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}

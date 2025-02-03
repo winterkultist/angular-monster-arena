@@ -15,6 +15,7 @@ export class MonsterListComponent {
   @Input() monsters: Monster[] = [];
 
   sendToArena(monster: Monster) {
-    
+    // TODO
+    window.alert('TODO!');
   }
 }
