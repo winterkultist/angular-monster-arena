@@ -41,7 +41,7 @@ export class AppComponent {
       resistances: [
         'ICE'
       ],
-      maxEnergy: 12,
+      maxEnergy: 8,
       maxHealth: 10
     },
     {
@@ -52,12 +52,12 @@ export class AppComponent {
         {
           name: 'Splash',
           element: 'ACID',
-          damage: 3,
+          damage: 2,
           energyCost: 3
         }
       ],
       resistances: [],
-      maxEnergy: 14,
+      maxEnergy: 12,
       maxHealth: 8
     },
     {
@@ -79,7 +79,7 @@ export class AppComponent {
         },
       ],
       resistances: [],
-      maxEnergy: 8,
+      maxEnergy: 7,
       maxHealth: 10
     }
   ];
