@@ -2,6 +2,14 @@
 
 This is an Angular advanced training project
 
+## Get started
+
+Install dependencies
+
+```
+npm install
+```
+
 ## Development server
 
 To start a local development server, run:
