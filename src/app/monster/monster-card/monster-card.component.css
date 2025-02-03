@@ -10,6 +10,12 @@
   align-items: center;
 }
 
+.card.ko {
+  background-color: indianred;
+  border: 0.25rem solid darkred;
+  box-shadow: 0.5rem 0.5rem 0.125rem darkred;
+}
+
 .img-box {
   margin: 1rem;
   background-color: whitesmoke;

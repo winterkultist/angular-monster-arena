@@ -1,4 +1,4 @@
-<div class="card">
+<div class="card {{ monster.currentHealth == 0 ? 'ko' : '' }}">
   <div class="img-box">
     @if (flipImage) {
       <img src="/img/heads/{{monster.img}}.png" alt="monster-pic" class="flipped">
