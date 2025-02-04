@@ -1,0 +1,20 @@
+@startuml
+'https://plantuml.com/salt
+
+salt
+{^"Create a new Monster"
+Name        | "Mycoolak"
+Element     | ^FIRE^
+Max Energy  | "12"
+Max Health  | "10"
+Resistances | [] FIRE
+.           | [] ICE
+.           | [] ACID
+.           | [] POISON
+Attacks     | Name | "Shard" | Damage | "3 " | Cost | "2 " | [X]
+.           | Name | "Spit " | Damage | "2 " | Cost | "2 " | [X]
+.           | Name | "Slit " | Damage | "1 " | Cost | "1 " | [X]
+.           | [+]
+[CREATE!]
+}
+@enduml
