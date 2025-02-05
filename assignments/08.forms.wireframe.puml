@@ -1,6 +1,35 @@
-@startuml
-'https://plantuml.com/salt
+https://plantuml.com/salt
 
+@startuml
+' After assignment *Creator*
+salt
+{^"Create a new Monster"
+Name        | "Mycoolak"
+Element     | ^FIRE^
+Max Energy  | "12"
+Max Health  | "10"
+[CREATE!]
+}
+@enduml
+
+@startuml
+' After assignment *Resistances*
+salt
+{^"Create a new Monster"
+Name        | "Mycoolak"
+Element     | ^FIRE^
+Max Energy  | "12"
+Max Health  | "10"
+Resistances | [] FIRE
+.           | [] ICE
+.           | [] ACID
+.           | [] POISON
+[CREATE!]
+}
+@enduml
+
+@startuml
+' After assignment *Attacks*
 salt
 {^"Create a new Monster"
 Name        | "Mycoolak"
