@@ -11,10 +11,10 @@ Resistances | [] FIRE
 .           | [] ICE
 .           | [] ACID
 .           | [] POISON
-Attacks     | Name | "Shard" | Damage | "3 " | Cost | "2 " | [X]
-.           | Name | "Spit " | Damage | "2 " | Cost | "2 " | [X]
-.           | Name | "Slit " | Damage | "1 " | Cost | "1 " | [X]
-.           | [+]
+Attacks     | Name | "Shard" | Damage | "3 " | Cost | "2 " | [<&x>]
+.           | Name | "Spit " | Damage | "2 " | Cost | "2 " | [<&x>]
+.           | Name | "Slit " | Damage | "1 " | Cost | "1 " | [<&x>]
+.           | [<&plus>]
 [CREATE!]
 }
 @enduml
