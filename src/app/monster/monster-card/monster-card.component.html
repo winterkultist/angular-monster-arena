@@ -17,7 +17,7 @@
       </div>
       <div>
         <div>Resistances</div>
-        <div>{{ monster.resistances?.[0] }}</div>
+        <div>{{ monster.resistances[0] }}</div>
         <div>🔥</div>
       </div>
       <div>
@@ -27,14 +27,14 @@
       </div>
     </div>
     <div class="energy bar">
-      @let energyPercent = ((monster.currentEnergy ?? 1) / (monster.maxEnergy ?? 1)) * 100;
+      @let energyPercent = ((monster.currentEnergy ?? 1) / monster.maxEnergy) * 100;
       <div class="inner-bar" [style.width]="energyPercent + '%'"></div>
       <div class="info">
         {{ monster.currentEnergy }} / {{ monster.maxEnergy }}
       </div>
     </div>
     <div class="health bar">
-      @let healthPercent = ((monster.currentHealth ?? 1) / (monster.maxHealth ?? 1)) * 100;
+      @let healthPercent = ((monster.currentHealth ?? 1) / monster.maxHealth) * 100;
       <div class="inner-bar" [style.width]="healthPercent + '%'"></div>
       <div class="info">
         {{ monster.currentHealth }} / {{ monster.maxHealth }}
